@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package url;
+
+
+option go_package = "github.com/iamkirillnb/url_redirect";
+
+service UrlRedirect {
+    rpc GetUrlOuter(GetUrlOuterRequest) returns (GetUrlOuterResponse) {}
+}
+
+message GetUrlOuterRequest {
+    string inner = 1;
+}
+message GetUrlOuterResponse {
+    string outer = 1;
+}
